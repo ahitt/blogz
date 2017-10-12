@@ -42,11 +42,14 @@ def newpost():
         title = request.form['title']
         entry = request.form['entry']
 
+        title_error=''
+        entry_error = ''
+
         if title == "" or entry == "":
             if title == "":
                 title_error = "Enter a title"
             if entry == "":
-                entry = "Enter a body for the post"
+                entry_error = "Enter a body for the post"
             return render_template('newpost.html', title=title, entry=entry, entry_error=entry_error, title_error=title_error)
         else:
             newpost=Blog(title,entry)
