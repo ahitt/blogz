@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>Build-A-Blog</title>
+        <title>Blogz</title>
     <style>
         .error {
             color: red;
@@ -11,9 +11,14 @@
     <body>
  
         <nav>
-            <a href='/newpost'>New Post</a>
+            <a href='/'>Home</a>
             <a href='/blog'>Main Blog Page</a>
+            <a href='/newpost'>New Post</a>
+            <a href='/login'>Log In</a>
+            <a href='/signup'>Sign Up</a>
+            <a href='/logout'>Log out</a>
         </nav>
+        
         {% block content %}
         {% endblock %}
 
